@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+
+	<title>PyCon India 2014</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<style type="text/css" media="screen, projection">
+	body {
+		font-family: 'Lato', sans-serif;
+		font-size: 14px;
+		color: #333;
+		margin: 0;
+	}
+
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		width: 900px;
+	}
+
+    .parallax-port {
+        display: block;
+        position: absolute;
+        height: 600px; width:100%;
+        left:0;
+        background: #eeeeee; overflow: hidden;
+    }
+    
+    .parallax-layer {
+        position: absolute;
+    }
+	header {
+		border-bottom: 2px solid #333;
+	}
+	header ul {
+		list-style-type:none;
+		padding:0;
+		margin: 15px;
+	}
+	header ul li {
+		display:inline;
+		padding: 15px;
+		font-size: 16px;
+	}
+	header ul li:hover {
+		background: #55B6D9;
+		color: #eee;
+	}
+	header ul li a {
+		color: inherit;
+		text-decoration: none;
+	}
+	</style>
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container">
+			<ul>
+				<li><a href="/2014/about/what-is-pycon/">About</a></li>
+				<li><a href="#">Events</a></li>
+				<li><a href="/2014/speaking/speakatpycon/">Speaking</a></li>
+				<li><a href="/2014/sponsors/">Sponsors</a></li>
+				<li><a href="#">Venue</a></li>
+				<li class=" "><a href="http://pycon.blogspot.com/">News</a></li>
+				<li><a href="#">PSF</a></li>
+				<li><a href="/2014/registration/">Registration</a></li>
+			</ul>	
+		</div>
+    </header>
+
+  <div id="target" class="parallax-port">
+      <img class="parallax-layer" src="../images/pycon/ocean.png" alt="" />
+      <img class="parallax-layer" src="../images/pycon/america.png" alt="" />
+      <img class="parallax-layer" src="../images/pycon/europe.png" alt="" />
+      <img class="parallax-layer" src="../images/pycon/india.png" alt="" />
+      <img class="parallax-layer" src="../images/pycon/glasses.png" alt="" />
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+  <script src="../js/jquery.parallax.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function(){
+      var target = jQuery("#target");
+      
+      target
+      .children('img')
+      .parallax(
+          { mouseport: target },
+          { xparallax: 1.0, yparallax: 1.0 },     // ocean layer options
+          { xparallax: 0.8, yparallax: 0.8 },     // america layer options
+          { xparallax: 0.6, yparallax: 0.6 },     // europe layer options
+          { xparallax: 0.4, yparallax: 0.4 },     // india layer options
+          { xparallax: 0.2, yparallax: 0.2 }      // glasses layer options
+      );
+  });
+  </script>
+
+<!--[if lt IE 7]>
+<script type="text/javascript" src="js/jquery.ifixpng.js"></script>
+<script type="text/javascript">jQuery(document).ready(function(){ jQuery("img[src$='png']").ifixpng(); });</script>
+<![endif]-->
+
+</body>
+</html>
