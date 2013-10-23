@@ -52,7 +52,7 @@
     }
 	header.header {
 		border-bottom: 2px solid #333;
-		background: #ADE2F5;
+		background: #f1f1f1;
 		margin: 0px;
 		height: 34px;
 		padding-top: 15px;
@@ -137,10 +137,12 @@
     </header>
 
   <div id="target" class="parallax-port">
-      <img class="parallax-layer" src="images/ocean.png" alt="" />
-      <img class="parallax-layer" src="images/america.png" alt="" />
-      <img class="parallax-layer" src="images/europe.png" alt="" />
-      <img class="parallax-layer" src="images/india.png" alt="" />
+      <img class="parallax-layer" src="images/sky.png" alt="" />
+      <img class="parallax-layer" src="images/scrappers.png" alt="" />
+      <img class="parallax-layer" src="images/scrappers2.png" alt="" />
+      <img class="parallax-layer" src="images/table.png" alt="" />
+      <img class="parallax-layer" src="images/poles.png" alt="" />
+      <img class="parallax-layer" src="images/crowd.png" alt="" />
       <img class="parallax-layer" src="images/glasses.png" alt="" />
   </div>
 
@@ -196,11 +198,13 @@
       .children('img')
       .parallax(
           { mouseport: target },
-          { xparallax: 1.0, yparallax: 1.0 },     // ocean layer options
-          { xparallax: 0.8, yparallax: 0.8 },     // america layer options
-          { xparallax: 0.6, yparallax: 0.6 },     // europe layer options
-          { xparallax: 0.4, yparallax: 0.4 },     // india layer options
-          { xparallax: 0.2, yparallax: 0.2 }      // glasses layer options
+          { xparallax: 1.0, yparallax: 1.0 },     // sky layer options
+          { xparallax: 0.8, yparallax: 0.8 },     // scrappers layer options
+          { xparallax: 0.7, yparallax: 0.7 },     // scrappers2 layer options
+          { xparallax: 0.3, yparallax: 0.5 },     // table layer options
+          { xparallax: 0.8, yparallax: 0.8 },     // poles layer options
+          { xparallax: 0.5, yparallax: 0.5 },     // crowd layer options
+          { xparallax: 0.1, yparallax: 0.1 }      // glasses layer options
       );
   });
   </script>
