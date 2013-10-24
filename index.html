@@ -20,6 +20,11 @@
 		color: #006da3;
 	}
 
+	h1 {
+		font-size: 42px;
+		font-weight: 700;
+	}
+
 	h2 {
 		font-size: 35px;
 		font-weight: 700;
@@ -36,7 +41,8 @@
 	}
 
 	section	{
-		margin-top: 90px;
+		padding-top: 60px;
+		padding-bottom: 60px;
 	}
 
     .parallax-port {
@@ -52,7 +58,7 @@
     }
 	header.header {
 		border-bottom: 2px solid #333;
-		background: #f1f1f1;
+		background: #FDC65F;
 		margin: 0px;
 		height: 34px;
 		padding-top: 15px;
@@ -68,7 +74,7 @@
 		font-size: 16px;
 	}
 	header ul li:hover {
-		background: #55B6D9;
+		background: #EA6F73;
 		color: #eee;
 	}
 	header ul li a {
@@ -98,7 +104,6 @@
 		border-radius: 150px;
 		-webkit-border-radius: 150px;
 		-moz-border-radius: 150px;
-		background: url(http://link-to-your/image.jpg) no-repeat;
 		box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 		-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 		-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
@@ -116,6 +121,16 @@
 	}
 	.sponsors img.silver {
 		max-width: 125px;
+	}
+
+	.back1 {
+		background: #210D10;
+		color: #f7f5e7;
+	}
+
+	.back2 {
+		background: #722D19;
+		color: #f7f5e7;
 	}
 	</style>
 </head>
@@ -137,30 +152,15 @@
     </header>
 
   <div id="target" class="parallax-port">
-      <img class="parallax-layer" src="images/sky.png" alt="" />
+      <img class="parallax-layer" src="images/taj.png" alt="" />
       <img class="parallax-layer" src="images/scrappers.png" alt="" />
-      <img class="parallax-layer" src="images/scrappers2.png" alt="" />
-      <img class="parallax-layer" src="images/table.png" alt="" />
-      <img class="parallax-layer" src="images/poles.png" alt="" />
-      <img class="parallax-layer" src="images/crowd.png" alt="" />
-      <img class="parallax-layer" src="images/glasses.png" alt="" />
+      <img class="parallax-layer" src="images/sky.png" alt="" />
+      <img class="parallax-layer" src="images/ground.png" alt="" />
+      <img class="parallax-layer" src="images/gravity.png" alt="" />
+      <img class="parallax-layer" src="images/slide.png" alt="" />
   </div>
 
-  	<section id="keynote">
-  		<div class="container center">
-			<h2>Keynote Speakers</h2>
-  		  	<div class="keynote">
-			  	<img class="speaker" src="images/speaker1.jpg">
-			  	<h3><a href="#">Speaker Foo</a></h3>
-		  	</div>
-  	  	  	<div class="keynote">
-  		      	<img class="speaker" src="images/speaker2.jpg">
-		      	<h3><a href="#">Speaker Bar</a></h3>
-		  	</div>
-  	  	</div>
-	</section>
 
-	<hr>
 
   	<section id="sponsors">
   	  	<div class="container center sponsors">
@@ -168,7 +168,7 @@
 	 		<a href="http://www.zeomega.com"><img class="platinum" alt="ZeOmega" src="http://in.pycon.org/_themes/pyconindia2013/img/2013/sponsors/sponsor-zeomega.png"></a>
       		<br>
       		<a href="http://www.enthought.com"><img class="gold" alt="Enthought" src="http://in.pycon.org/_themes/pyconindia2013/img/sponsors/gold-enthought.png"></a>
-      		<a href="http://www.goibibo.com"><img class="gold" alt="GoIbibo" src="images/gold-goibibo.png"></a>
+      		<a href="http://www.goibibo.com"><img class="gold" alt="GoIbibo" src="images/static/gold-goibibo.png"></a>
       		<a href="http://www.bluejeans.com"><img class="gold" alt="BlueJeans" src="http://in.pycon.org/_themes/pyconindia2013/img/sponsors/gold-bluejeans.png"></a>
       		<a href="http://www.plivo.com"><img class="gold" alt="Plivo" src="https://imgee.s3.amazonaws.com/imgee/b07ff480850e4576bd9062f117bb4e9d_w250.png"></a>
       		<a href="http://www.dubizzle.com"><img class="gold" alt="Dubbizle" src="https://images.hasgeek.com/embed/file/a04d39d946ba41de97a162178247c8c7"></a>
@@ -187,7 +187,27 @@
   	  	</div>
   	</section>
 
-	<hr>
+
+  	<section id="keynote" class="back1">
+  		<div class="container center">
+			<h2>Keynote Speakers</h2>
+  		  	<div class="keynote">
+			  	<img class="speaker" src="images/static/speaker1.jpg">
+			  	<h3><a href="#">Speaker Foo</a></h3>
+		  	</div>
+  	  	  	<div class="keynote">
+  		      	<img class="speaker" src="images/static/speaker2.jpg">
+		      	<h3><a href="#">Speaker Bar</a></h3>
+		  	</div>
+  	  	</div>
+	</section>
+
+
+	<section class="back2">
+		<div class="container">
+			<h1>Be Calm and Code</h1>
+		</div>
+	</section>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
   <script src="js/jquery.parallax.js"></script>
@@ -198,15 +218,20 @@
       .children('img')
       .parallax(
           { mouseport: target },
-          { xparallax: 1.0, yparallax: 1.0 },     // sky layer options
-          { xparallax: 0.8, yparallax: 0.8 },     // scrappers layer options
-          { xparallax: 0.7, yparallax: 0.7 },     // scrappers2 layer options
-          { xparallax: 0.3, yparallax: 0.5 },     // table layer options
-          { xparallax: 0.8, yparallax: 0.8 },     // poles layer options
-          { xparallax: 0.5, yparallax: 0.5 },     // crowd layer options
-          { xparallax: 0.1, yparallax: 0.1 }      // glasses layer options
+          { xparallax: 0.8, yparallax: 0.5 },     // sky layer options
+          { xparallax: 0.2, yparallax: 0.2 },     // taj layer options
+          { xparallax: 0.4, yparallax: 0.4 },     // scrappers layer options
+          { xparallax: 0.1, yparallax: 0.3 },     // ground layer options
+          { xparallax: 0.3, yparallax: 0.8 },     // gravity layer options
+          { xparallax: 0.5, yparallax: 0.5 }      // slide layer options
       );
+      function dblclick() {
+	      $('html,body').animate({ scrollTop: 0 }, 'slow');
+      }
+	  document.ondblclick=dblclick;
   });
+
+	
   </script>
 
 <!--[if lt IE 7]>
